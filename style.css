@@ -8,26 +8,34 @@ h1{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: blueviolet;
     }
+/* Toggle button styling */
+.nav-toggle {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.nav-toggle:hover {
+  background-color: #333;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #000000;
-
-  /* Flexbox layout for centering */
+  background-color: #000;
   display: flex;
-  justify-content: center; /* Centers items horizontally */
-  align-items: center;     /* Centers items vertically */
-  flex-wrap: wrap;
-
-  /* Fixed positioning at top */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensures it stays above other elements */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  flex-wrap: wrap; /* Wraps on small screens */
 }
 
+/* Navigation items */
 ul li {
   margin: 0;
 }
@@ -44,11 +52,24 @@ ul li a:hover {
   background-color: #c49999;
 }
 
-/* Mobile responsive: stack links vertically */
+/* Responsive: stack vertically on small screens */
 @media (max-width: 600px) {
   ul {
     flex-direction: column;
   }
+}
+
+.content {
+  padding: 20px;
+}
+
+.content {
+  padding: 20px;
+}
+
+
+.hidden {
+  display: none;
 }
 .title-container {
   display: flex;
@@ -64,7 +85,7 @@ ul li a:hover {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 50%; /* optional, makes it circular */
+  border-radius: 50%;
 }
 
 .title-container h1 {
