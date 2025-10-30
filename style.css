@@ -1,26 +1,35 @@
 body{
-    background-color: rgb(97, 57, 100);
+    background-color: rgb(106, 61, 109);
+        margin: 0;
+        padding: 0;
 
 }
 h1{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: blueviolet;
     }
-    ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #000000;
+
+  /* Flexbox layout for centering */
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center;     /* Centers items vertically */
+  flex-wrap: wrap;
+
+  /* Fixed positioning at top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
 
 ul li {
-  float: left;
+  margin: 0;
 }
 
 ul li a {
@@ -34,13 +43,21 @@ ul li a {
 ul li a:hover {
   background-color: #c49999;
 }
+
+/* Mobile responsive: stack links vertically */
+@media (max-width: 600px) {
+  ul {
+    flex-direction: column;
+  }
+}
 .title-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   text-align: center;
-  flex-wrap: wrap; /* Allows wrapping on small screens */
+  flex-wrap: wrap;
+  margin-top: 60px;
 }
 
 .title-container img {
@@ -66,7 +83,6 @@ ul li a:hover {
   .title-container img {
     width: 60px;
     height: 60px;
-      margin-top: 10px;
   }
 
   .title-container h1 {
